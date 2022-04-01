@@ -12,7 +12,8 @@ v1.2.5 FMH
 3 = hellish spam (ruins discord)
 4 = fake gw spam (lags servers)
 5 = http url spam (why)
-6 = webhook deleter (not out yet)
+6 = webhook deleter 
+ 
 
 ''')
 maaain = input("Enter Number : ")
@@ -102,11 +103,11 @@ elif maaain =="5":
     urlz = random.choice(['people','family','apple','cart','shoe','pro','sports','home','smile','read','hat','boat'])
     hb = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))
     domain2 = random.choice(['.net','.com'])
-    urlz2 = random.choice(['dog','cat','sex','file','text','map','tub','fly','mob','got','weed'])
+    urlz2 = random.choice(['dog','cat','sex','file','text','map','tub','fly','mob','got','weed','space','lo'])
     hb2 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))       
     domain3 = random.choice(['.net','.com'])    
     hb3 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))
-    urlz3 = random.choice(['pop','job','bus','rod','new','music','mad','disk','ok','chat'])
+    urlz3 = random.choice(['pop','job','bus','rod','new','music','mad','disk','ok','chat','bomb'])
     name7 = "h"
     stat1 = (f"https://{urlz}{hb}{domain}")
     stat2 = (f"https://{urlz2}{hb2}{domain2}")
@@ -119,7 +120,19 @@ elif maaain =="5":
     if h.status_code == 429:    
        print(f"Rate Limited {h}")
     
+elif maaain =="6":
+  webhook = input("Enter The Full Webhook Url : ")
+  numm = int(9999999999)
+  requests.delete(webhook)
+  print("Webhook Deleted Checking To Make Sure Now")
+  b = requests.get(webhook)
+  print(f"{b.text}")
+  
+  
+  
   
 else:
   print("Invalid Responce")
 
+
+       
