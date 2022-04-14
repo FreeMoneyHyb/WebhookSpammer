@@ -87,7 +87,7 @@ elif maaain =="5":
 elif maaain =="6":
   webhook = input("Enter The Full Webhook Url : ")
   requests.delete(webhook)
-  print("Webhook Deleted Checking To Make Sure Now")
+  print("Webhook Deleted, Checking To Make Sure Now")
   b = requests.get(webhook)
   print(f"{b.text}")
   
@@ -119,9 +119,9 @@ elif maaain =="8":
    time.sleep(.5)
    print(f"Message Sent - {h}")
    if h.status_code == 429:    
-      print(f"Rate Limited {h}")
+      print(f"Rate Limited (Ratetio){h}")
    if h.status_code == 400:
-     print("More Then 2000 Caracters Dectected!")
+     print("More Then 2000 Characters Dectected!")
     
  
   
